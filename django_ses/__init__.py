@@ -72,7 +72,7 @@ class SESBackend(BaseEmailBackend):
             self.connection = SESConnection(
                 aws_access_key_id=self._access_key_id,
                 aws_secret_access_key=self._access_key,
-                region=self._region,
+                #region=self._region,
             )
         except:
             if not self.fail_silently:
