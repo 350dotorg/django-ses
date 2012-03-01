@@ -12,10 +12,10 @@ ACCESS_KEY = getattr(settings, 'AWS_SES_ACCESS_KEY_ID',
 SECRET_KEY = getattr(settings, 'AWS_SES_SECRET_ACCESS_KEY',
     getattr(settings, 'AWS_SECRET_ACCESS_KEY', None))
 
-AWS_SES_REGION_NAME = getattr(settings, 'AWS_SES_REGION_NAME',
-    SESConnection.DefaultRegionName),
+AWS_SES_REGION_NAME = getattr(settings, 'AWS_SES_REGION_NAME', 
+                              'us-east-1')
 AWS_SES_REGION_ENDPOINT = getattr(settings, 'AWS_SES_REGION_ENDPOINT',
-    SESConnection.DefaultRegionEndpoint)
+                                  'email.us-east-1.amazonaws.com')
 
 AWS_SES_AUTO_THROTTLE = getattr(settings, 'AWS_SES_AUTO_THROTTLE', 0.5)
 AWS_SES_RETURN_PATH = getattr(settings, 'AWS_SES_RETURN_PATH', None)
